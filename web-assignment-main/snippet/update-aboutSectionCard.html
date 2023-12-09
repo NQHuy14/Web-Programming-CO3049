@@ -1,0 +1,233 @@
+<div class="cv-form-row-title">
+  <h3>About section</h3>
+</div>
+<p class="fs-17 text-center" id="aboutme--notFound">
+  <span class="fw-6 text-danger">CV not found</span>
+  (maybe you have not <a href="index.php?page=login">logged in</a> or this CV is
+  not existing, click this <a href="index.php?page=create-resume">link</a>
+  to create your resume)
+</p>
+<section style="background-color: #eee" id="aboutme--section">
+  <div class="container pt-2">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="card mb-4">
+          <div class="card-body text-center">
+            <!-- Dynamically set the src attribute using JavaScript -->
+            <div class="position-relative d-inline-block">
+              <img
+                id="aboutme--avatarImg"
+                alt="avatar"
+                class="aboutme--avatar"
+              />
+              <div
+                id="aboutme--avatarImageIcon"
+                class="position-absolute bottom-0 end-0"
+                style="cursor: pointer"
+              >
+                <svg
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.2647 15.9377L12.5473 14.2346C11.758 13.4519 11.3633 13.0605 10.9089 12.9137C10.5092 12.7845 10.079 12.7845 9.67922 12.9137C9.22485 13.0605 8.83017 13.4519 8.04082 14.2346L4.04193 18.2622M14.2647 15.9377L14.606 15.5991C15.412 14.7999 15.8149 14.4003 16.2773 14.2545C16.6839 14.1262 17.1208 14.1312 17.5244 14.2688C17.9832 14.4253 18.3769 14.834 19.1642 15.6515L20 16.5001M14.2647 15.9377L18.22 19.9628M18.22 19.9628C17.8703 20 17.4213 20 16.8 20H7.2C6.07989 20 5.51984 20 5.09202 19.782C4.7157 19.5903 4.40973 19.2843 4.21799 18.908C4.12583 18.7271 4.07264 18.5226 4.04193 18.2622M18.22 19.9628C18.5007 19.9329 18.7175 19.8791 18.908 19.782C19.2843 19.5903 19.5903 19.2843 19.782 18.908C20 18.4802 20 17.9201 20 16.8V13M11 4H7.2C6.07989 4 5.51984 4 5.09202 4.21799C4.7157 4.40973 4.40973 4.71569 4.21799 5.09202C4 5.51984 4 6.0799 4 7.2V16.8C4 17.4466 4 17.9066 4.04193 18.2622M18 9V6M18 6V3M18 6H21M18 6H15"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <input
+                type="file"
+                id="aboutme--avatarInput"
+                style="display: none"
+              />
+            </div>
+            <h4 class="my-3" id="aboutme--fullName"></h4>
+            <p class="text-muted" id="aboutme--title"></p>
+            <h5 class="my-2">Summary</h5>
+            <p
+              class="text-muted mb-2"
+              style="text-align: justify"
+              id="aboutme--objective"
+            ></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">First Name</p>
+              </div>
+              <div class="col-sm-9">
+                <!-- Dynamically set the text content using JavaScript -->
+                <p class="text-muted mb-0" id="aboutme--firstName"></p>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Last Name</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0" id="aboutme--lastName"></p>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Gender</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0" id="aboutme--gender"></p>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Date of Birth</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0" id="aboutme--dob"></p>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Hobby</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0" id="aboutme--hobby"></p>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Address</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0" id="aboutme--location"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center mb-2">
+          <button
+            id="aboutme--edit-btn"
+            type="button"
+            class="btn btn-primary btn-lg"
+          >
+            Edit
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function updateAboutMeUI(data) {
+    if (data.length === 0) {
+      // no data found
+      document.getElementById("aboutme--section").style.display = "none";
+      document.getElementById("aboutme--notFound").style.display = "block";
+    } else {
+      // Update the DOM elements with fetched data
+      data = data[0];
+      document.getElementById("aboutme--section").style.display = "block";
+      document.getElementById("aboutme--notFound").style.display = "none";
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const cvID = urlParams.get("cvID");
+      document.getElementById(
+        "aboutme--avatarImg"
+      ).src = `./public/uploads/img-cv-${cvID}.png`;
+
+      document.getElementById("aboutme--fullName").textContent =
+        (data.fname || "") + " " + (data.lname || "");
+      document.getElementById("aboutme--title").textContent = data.title;
+      document.getElementById("aboutme--objective").textContent =
+        data.objective;
+      document.getElementById("aboutme--firstName").textContent = data.fname;
+      document.getElementById("aboutme--lastName").textContent = data.lname;
+      document.getElementById("aboutme--gender").textContent = data.gender;
+      document.getElementById("aboutme--dob").textContent = data.dob;
+      document.getElementById("aboutme--hobby").textContent = data.hobby;
+      document.getElementById("aboutme--location").textContent = data.location;
+      document
+        .getElementById("aboutme--edit-btn")
+        .addEventListener("click", () => openPopup("About Me", data, "update"));
+    }
+  }
+
+  function fetchAboutMeData() {
+    const urlParams = new URLSearchParams(window.location.search);
+    // Make an AJAX request using Fetch API
+    return fetch(
+      `service/cvService/findCVById.php?cvID=${urlParams.get("cvID")}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((response) => response.json())
+      .then((result) => {
+        updateAboutMeUI(result.data);
+        return result.data;
+      })
+      .catch((err) => {
+        alert("Error: " + err);
+      });
+  }
+
+  // Call the fetchAboutMeData function
+  fetchAboutMeData().then((data) => {
+    document
+      .getElementById("aboutme--avatarInput")
+      .addEventListener("change", handleFileInputChange);
+    // Trigger file input click when the SVG icon is clicked
+    document
+      .getElementById("aboutme--avatarImageIcon")
+      .addEventListener("click", function () {
+        document.getElementById("aboutme--avatarInput").click();
+      });
+
+    function handleFileInputChange(event) {
+      const fileInput = event.target;
+      const file = fileInput.files[0];
+
+      if (file) {
+        // Check if the file type is an image
+        if (file.type.startsWith("image/")) {
+          const reader = new FileReader();
+
+          reader.onload = function (e) {
+            // Create FormData and append the file
+            const formData = new FormData();
+            formData.append("file", file);
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const cvID = urlParams.get("cvID");
+            uploadImg(cvID, formData);
+
+            const imgElement = document.getElementById("aboutme--avatarImg");
+            imgElement.src = `./public/uploads/img-cv-${cvID}.png`;
+          };
+
+          reader.readAsDataURL(file);
+        } else {
+          alert("Please select an image file.");
+          fileInput.value = "";
+        }
+      }
+    }
+  });
+</script>

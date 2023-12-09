@@ -1,0 +1,1276 @@
+{
+	"info": {
+		"_postman_id": "5b1e18f9-cc12-44e8-931b-d917b1fc13a3",
+		"name": "Web_assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23456990"
+	},
+	"item": [
+		{
+			"name": "activityService",
+			"item": [
+				{
+					"name": "createActivity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cvID",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "title1",
+									"type": "text"
+								},
+								{
+									"key": "detail",
+									"value": "detail1",
+									"type": "text"
+								},
+								{
+									"key": "startYear",
+									"value": "2020",
+									"type": "text"
+								},
+								{
+									"key": "endYear",
+									"value": "2021",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/activityService/createActivity.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"activityService",
+								"createActivity.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findActivityByCVId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/service/activityService/findActivityByCVId.php?cvID=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"activityService",
+								"findActivityByCVId.php"
+							],
+							"query": [
+								{
+									"key": "cvID",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteActivityById",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/activityService/deleteActivityById.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"activityService",
+								"deleteActivityById.php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "awardService",
+			"item": [
+				{
+					"name": "createAward",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cvID",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "detail",
+									"value": "detail1",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2023",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/awardService/createAward.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"awardService",
+								"createAward.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAwardByCVId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/service/awardService/findAwardByCVId.php?cvID=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"awardService",
+								"findAwardByCVId.php"
+							],
+							"query": [
+								{
+									"key": "cvID",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAwardById",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/awardService/deleteAwardById.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"awardService",
+								"deleteAwardById.php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "certificationService",
+			"item": [
+				{
+					"name": "createCertification",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cvID",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "detail",
+									"value": "detail1",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2023",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/certificationService/createCertification.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"certificationService",
+								"createCertification.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findCertificationByCVId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/service/certificationService/findCertificationByCVId.php?cvID=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"certificationService",
+								"findCertificationByCVId.php"
+							],
+							"query": [
+								{
+									"key": "cvID",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCertificationById",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/certificationService/deleteCertificationById.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"certificationService",
+								"deleteCertificationById.php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cvService",
+			"item": [
+				{
+					"name": "createCV",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Software engineer CV",
+									"type": "text"
+								},
+								{
+									"key": "userID",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/cvService/createCV.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"cvService",
+								"createCV.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCV",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fname",
+									"value": "fname1",
+									"type": "text"
+								},
+								{
+									"key": "lname",
+									"value": "lname1",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "title1",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "gender1",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "2003-03-01",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "location1",
+									"type": "text"
+								},
+								{
+									"key": "objective",
+									"value": "objective1",
+									"type": "text"
+								},
+								{
+									"key": "hobby",
+									"value": "hobby1",
+									"type": "text"
+								},
+								{
+									"key": "cvID",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/cvService/updateCV.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"cvService",
+								"updateCV.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCV",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cvID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/cvService/deleteCV.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"cvService",
+								"deleteCV.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findCVById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/service/cvService/findCVById.php?cvID=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"cvService",
+								"findCVById.php"
+							],
+							"query": [
+								{
+									"key": "cvID",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findCVByUserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/service/cvService/findCVByUserId.php?userID=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"cvService",
+								"findCVByUserId.php"
+							],
+							"query": [
+								{
+									"key": "userID",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploadImg",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cvID",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/HP/Pictures/Screenshots/Ex1.1.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/cvService/uploadImg.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"cvService",
+								"uploadImg.php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "degreeService",
+			"item": [
+				{
+					"name": "findDegreeByCVId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/service/degreeService/findDegreeByCVId.php?cvID=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"degreeService",
+								"findDegreeByCVId.php"
+							],
+							"query": [
+								{
+									"key": "cvID",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createDegree",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cvID",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "school",
+									"value": "school1",
+									"type": "text"
+								},
+								{
+									"key": "major",
+									"value": "major1",
+									"type": "text"
+								},
+								{
+									"key": "gpa",
+									"value": "9.955",
+									"type": "text"
+								},
+								{
+									"key": "startYear",
+									"value": "2021",
+									"type": "text"
+								},
+								{
+									"key": "endYear",
+									"value": "2022",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/degreeService/createDegree.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"degreeService",
+								"createDegree.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteDegreeById",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/degreeService/deleteDegreeById.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"degreeService",
+								"deleteDegreeById.php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "emailAddressService",
+			"item": [
+				{
+					"name": "createEmailAddress",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cvID",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "2@3gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/emailAddressService/createEmailAddress.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"emailAddressService",
+								"createEmailAddress.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findEmailAddressByCVId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/service/emailAddressService/findEmailAddressByCVId.php?cvID=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"emailAddressService",
+								"findEmailAddressByCVId.php"
+							],
+							"query": [
+								{
+									"key": "cvID",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteEmailAddressById",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/emailAddressService/deleteEmailAddressById.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"emailAddressService",
+								"deleteEmailAddressById.php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "languagesService",
+			"item": [
+				{
+					"name": "createLanguage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cvID",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "lang",
+									"value": "English",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/languagesService/createLanguage.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"languagesService",
+								"createLanguage.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findLanguageByCVId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/service/languagesService/findLanguageByCVId.php?cvID=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"languagesService",
+								"findLanguageByCVId.php"
+							],
+							"query": [
+								{
+									"key": "cvID",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLanguageById Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/languagesService/deleteLanguageById.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"languagesService",
+								"deleteLanguageById.php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "phoneNumberService",
+			"item": [
+				{
+					"name": "createPhoneNumber",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cvID",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "numbers",
+									"value": "0909009",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/phoneNumberService/createPhoneNumber.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"phoneNumberService",
+								"createPhoneNumber.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findPhoneNumberByCVId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/service/phoneNumberService/findPhoneNumberByCVId.php?cvID=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"phoneNumberService",
+								"findPhoneNumberByCVId.php"
+							],
+							"query": [
+								{
+									"key": "cvID",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePhoneNumberById",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/phoneNumberService/deletePhoneNumberById.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"phoneNumberService",
+								"deletePhoneNumberById.php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "socialLinkService",
+			"item": [
+				{
+					"name": "createSocialLink",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cvID",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "link",
+									"value": "link2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/socialLinkService/createSocialLink.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"socialLinkService",
+								"createSocialLink.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findSocialLinkByCVId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/service/socialLinkService/findSocialLinkByCVId.php?cvID=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"socialLinkService",
+								"findSocialLinkByCVId.php"
+							],
+							"query": [
+								{
+									"key": "cvID",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteSocialLinkById",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/socialLinkService/deleteSocialLinkById.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"socialLinkService",
+								"deleteSocialLinkById.php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "userService",
+			"item": [
+				{
+					"name": "registerUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "user4",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/userService/registerUser.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"userService",
+								"registerUser.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "user2",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/userService/loginUser.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"userService",
+								"loginUser.php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "workExperienceService",
+			"item": [
+				{
+					"name": "createWorkExperience",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cvID",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "company",
+									"value": "company1",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "title1",
+									"type": "text"
+								},
+								{
+									"key": "detail",
+									"value": "detail1",
+									"type": "text"
+								},
+								{
+									"key": "startYear",
+									"value": "2020",
+									"type": "text"
+								},
+								{
+									"key": "endYear",
+									"value": "2021",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/workExperienceService/createWorkExperience.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"workExperienceService",
+								"createWorkExperience.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findWorkExperienceByCVId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/service/workExperienceService/findWorkExperienceByCVId.php?cvID=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"workExperienceService",
+								"findWorkExperienceByCVId.php"
+							],
+							"query": [
+								{
+									"key": "cvID",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteWorkExperienceById",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/service/workExperienceService/deleteWorkExperienceById.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"workExperienceService",
+								"deleteWorkExperienceById.php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

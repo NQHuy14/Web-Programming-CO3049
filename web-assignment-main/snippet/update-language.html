@@ -1,0 +1,64 @@
+<div class="cv-form-row-title">
+    <h3>Language</h3>
+</div>
+<section style="background-color: #eee;" id="language--section">
+    <div class="container pt-2">
+        <div class="row general-cards" id="language--info">
+        </div>
+    </div>
+</section>
+
+<script>
+    function updateLanguageUI(data) {
+        let languageContainer = document.getElementById('language--info');
+        languageContainer.innerHTML = '';
+
+        data.forEach((item, index) => {
+            const id = `language--edit-btn-${index}`;
+            languageContainer.innerHTML += `<div class="col-lg-4">
+                <div class="general-card" id=${id}>
+                    <p class="font-weight-normal text-center">${item.lang}</p>
+                </div>
+            </div>`
+        });
+
+        languageContainer.innerHTML += `<div class="col-lg-6 add-more-btn">
+            <button type="button" class="btn btn-link" id="language--add-more-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="13 11 17 11 17 13 13 13 13 17 11 17 11 13 7 13 7 11 11 11 11 7 13 7"
+                        fill="blue"></polygon>
+                </svg> Add one more language
+            </button>
+        </div>`;
+    }
+
+    function fetchLanguageData() {
+        const urlParams = new URLSearchParams(window.location.search);
+        // Make an AJAX request using Fetch API
+        return fetch(`service/languagesService/findLanguageByCVId.php?cvID=${urlParams.get('cvID')}`, {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+            .then(response => response.json())
+            .then(result => {
+                updateLanguageUI(result.data);
+                return result.data;
+            })
+            .catch(err => {
+                alert("Error: " + err);
+            });
+    }
+
+    // Call the fetchLanguageData function
+    fetchLanguageData().then(data => {
+        console.log("data: ", data);
+        data.forEach((item, index) => {
+            const id = `language--edit-btn-${index}`;
+            document.getElementById(id).addEventListener("click", () => openPopup('Language', item, "update"))
+        });
+
+        document.getElementById("language--add-more-btn").addEventListener("click", () => openPopup('Language', [], "add"))
+    })
+</script>

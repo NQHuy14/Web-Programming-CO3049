@@ -1,0 +1,68 @@
+<div class="cv-form-row-title">
+    <h3>Education</h3>
+</div>
+<section style="background-color: #eee;" id="education--section">
+    <div class="container pt-2">
+        <div class="row general-cards" id="education--info">
+        </div>
+    </div>
+</section>
+
+<script>
+    function updateEducationUI(data) {
+        let educationContainer = document.getElementById('education--info');
+        educationContainer.innerHTML = '';
+
+        data.forEach((item, index) => {
+            const id = `education--edit-btn-${index}`;
+            educationContainer.innerHTML += `<div class="col-lg-6">
+                <div class="general-card" id=${id}>
+                    <h5>${item.major} at ${item.school}</h5>
+                    <div class="d-flex justify-content-between">
+                        <p>gpa: ${item.gpa}</p>
+                        <p class="text-muted">${item.startYear} - ${item.endYear}</p>
+                    </div>
+                </div>
+            </div>`
+        });
+
+        educationContainer.innerHTML += `<div class="col-lg-6 add-more-btn">
+            <button type="button" class="btn btn-link" id="education--add-more-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="13 11 17 11 17 13 13 13 13 17 11 17 11 13 7 13 7 11 11 11 11 7 13 7"
+                        fill="blue"></polygon>
+                </svg> Add one more education
+            </button>
+        </div>`;
+    }
+
+    function fetchEducationData() {
+        const urlParams = new URLSearchParams(window.location.search);
+        // Make an AJAX request using Fetch API
+        return fetch(`service/degreeService/findDegreeByCVId.php?cvID=${urlParams.get('cvID')}`, {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+            .then(response => response.json())
+            .then(result => {
+                updateEducationUI(result.data);
+                return result.data;
+            })
+            .catch(err => {
+                alert("Error: " + err);
+            });
+    }
+
+    // Call the fetchEducationData function
+    fetchEducationData().then(data => {
+        console.log("data: ", data);
+        data.forEach((item, index) => {
+            const id = `education--edit-btn-${index}`;
+            document.getElementById(id).addEventListener("click", () => openPopup('Education', item, "update"))
+        });
+
+        document.getElementById("education--add-more-btn").addEventListener("click", () => openPopup('Education', [], "add"))
+    })
+</script>
